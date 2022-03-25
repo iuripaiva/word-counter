@@ -31,6 +31,17 @@
 			
 			// Count words based in the length of the array after deleting the empty spaces
 			var countWords = textArray.length;
+			
+			// Loop to see if there's any empty space between the words in the array and deletes it if so.
+			let i = 0;
+			while (i < textArray.length){
+			    if (textArray[i] == ""){
+				textArray.splice(i);
+				i++
+			    }else{
+				i++
+			    }
+			}
 
 			// If the array don't have any item, zero words will be counted.
 			if (textArray == 0){
