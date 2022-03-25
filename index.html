@@ -26,10 +26,21 @@
 			// Access and change binary variable
 			text = String(document.getElementById("text").value);
 
-			//convert the text to array
+			// Convert the text to array
 			var textArray = text.split(" ");
 			
-			// Count words based in the length of the array
+			// Loop to check if there's any empty spaces in the array, and delete if so.
+			let i = 0;
+			while (i < textArray.length){
+			    if (textArray[i] == ""){
+				textArray.splice(i,1);
+				i++
+			    }else{
+				i++
+			    }
+			}
+			
+			// Count words based in the length of the array after deleting the empty spaces
 			var countWords = textArray.length;
 
 			if (textArray == 0){
